@@ -1,7 +1,11 @@
 import * as express from 'express';
 
 const app = express();
-const port = 3000;
+const port = 3001;
+
+app.get('/', (err: any, res: any) => {
+  res.send('hehe');
+});
 
 app.listen(port, (err) => {
   if (err) {

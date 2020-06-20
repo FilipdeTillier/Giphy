@@ -5,8 +5,18 @@ services:
     image: api
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: ./server/Dockerfile
     volumes:
-      - .:/src/app
+      - ./server:/src/app
+    ports:
+      - '3001:3001'
+  client:
+    image: client
+    build:
+      context: ./
+      dockerfile: ./client/Dockerfile
+    volumes:
+      - ./client:/client
     ports:
       - '3000:3000'
+    stdin_open: true
