@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node dist/app.js",
-    "server": "nodemon --ignore ./client --exec ts-node server/server.ts"
+    "server": "nodemon --exec ts-node server/server.ts"
   },
   "author": "",
   "license": "ISC",
