@@ -4,3 +4,12 @@
 .App {
   text-align: center;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}

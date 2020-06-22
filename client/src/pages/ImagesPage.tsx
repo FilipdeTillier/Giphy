@@ -16,7 +16,7 @@ const ImagesPage: React.FC = () => {
   async function onSearchGiphy(searchValue: string) {
     try {
       const giphy = await getGiphy(searchValue, offset, perPage);
-      setGiphys([...giphys, ...giphy]);
+      setGiphys([...giphy]);
     } catch (err) {
       console.log(err);
     }

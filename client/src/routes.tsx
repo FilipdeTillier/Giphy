@@ -6,11 +6,13 @@ import ImagesPage from './pages/ImagesPage';
 export const Routes: React.FC = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/">
-          <ImagesPage />
-        </Route>
-      </Switch>
+      <div className="container">
+        <Switch>
+          <Route path="/">
+            <ImagesPage />
+          </Route>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 };
