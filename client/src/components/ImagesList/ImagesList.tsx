@@ -22,7 +22,7 @@ const ImagesList: React.FC<ImagesListProps> = ({ images, loadMore }) => {
       </div>
       {images.length > 0 && (
         <div className="images-button">
-          <button type="button" onClick={loadMore}>
+          <button data-testid="loadMore" type="button" onClick={loadMore}>
             Load more
           </button>
         </div>
