@@ -1,0 +1,30 @@
+.images-list {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  .card {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media all and (min-width: $md-screen) {
+  .images-list {
+    justify-content: space-between;
+    flex-direction: row;
+    .card {
+      width: 45%;
+    }
+  }
+}
+
+@media all and (min-width: $lg-screen) {
+  .images-list {
+    .card {
+      width: 30%;
+    }
+  }
+}
