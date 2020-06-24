@@ -7,6 +7,7 @@ import ImagesList from '../components/ImagesList/ImagesList';
 const ImagesPage: React.FC = () => {
   const [giphys, setGiphys] = useState<string[]>([]);
   const [offset, setOffset] = useState<number>(1);
+  const [searchValue, setSearchValue] = useState<string>('');
   const perPage = 20;
 
   function loadMore() {
@@ -30,9 +31,10 @@ const ImagesPage: React.FC = () => {
     }
   }
 
-  async function onSearchGiphy(searchValue: string) {
+  async function onSearchGiphy(value: string) {
     try {
-      const giphy = await getGiphy(searchValue, 1);
+      setSearchValue(value);
+      const giphy = await getGiphy(value, 1);
       giphy?.length && setGiphys(giphy);
     } catch (err) {
       console.log(err);
@@ -40,21 +42,14 @@ const ImagesPage: React.FC = () => {
   }
 
   useEffect(() => {
-    async function get() {
-      const giphy = await getGiphy('Burgers', offset);
+    async function getNextPage() {
+      const giphy = await getGiphy(searchValue, offset);
       giphy?.length && setGiphys([...giphys, ...giphy]);
     }
     if (offset > 1) {
-      get();
+      getNextPage();
     }
   }, [offset]);
-
-  useEffect(() => {
-    document.addEventListener('scroll', (e) => console.log(e));
-    return () => {
-      document.removeEventListener('scroll', (e) => console.log(e));
-    };
-  });
 
   return (
     <div>

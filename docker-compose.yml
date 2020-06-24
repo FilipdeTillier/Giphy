@@ -2,23 +2,26 @@ version: '3.3'
 
 services:
   api:
+    env_file:
+      - ./server/.env
     image: api
     build:
       context: ./
       dockerfile: ./server/Dockerfile
     volumes:
-      - ./server:/src/app
+      - './server:/src'
     ports:
       - '3001:3001'
+    stdin_open: true
   client:
-    environment:
-      REACT_APP_API_BASE: http://localhost:3001/api/
+    env_file:
+      - ./client/.env
     image: client
     build:
       context: ./
       dockerfile: ./client/Dockerfile
     volumes:
-      - ./client:/client
+      - './client:/src'
     ports:
       - '3000:3000'
     stdin_open: true

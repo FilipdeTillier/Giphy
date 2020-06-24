@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { pixBayMapData } from '../helpers/index';
 
-const PIXBAY_API_KEY: string = '17139964-6ef728ffe6e2cd91bdda41ec2';
+const { PIXBAY_API_KEY } = process.env;
 const PIXBAY_API_URL: string = `https://pixabay.com/api/?key=${PIXBAY_API_KEY}`;
 
 async function serachPixBay(q: string, per_page: number, page: string) {

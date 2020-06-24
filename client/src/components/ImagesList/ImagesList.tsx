@@ -14,6 +14,7 @@ const ImagesList: React.FC<ImagesListProps> = ({ images, loadMore }) => {
             <img
               className="card__image"
               src={image}
+              alt={image}
               width="100%"
               height="100%"
             ></img>
