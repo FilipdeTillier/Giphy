@@ -2,10 +2,9 @@ import React from 'react';
 
 interface ImagesListProps {
   images: string[];
-  loadMore: () => void;
 }
 
-const ImagesList: React.FC<ImagesListProps> = ({ images, loadMore }) => {
+const ImagesList: React.FC<ImagesListProps> = ({ images }) => {
   return (
     <>
       <div className="images-list">
@@ -21,13 +20,6 @@ const ImagesList: React.FC<ImagesListProps> = ({ images, loadMore }) => {
           </div>
         ))}
       </div>
-      {images.length > 0 && (
-        <div className="images-button">
-          <button data-testid="loadMore" type="button" onClick={loadMore}>
-            Load more
-          </button>
-        </div>
-      )}
     </>
   );
 };
