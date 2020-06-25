@@ -1,11 +1,11 @@
 import { PixBayInterface } from '../interfaces/PixBayInterfaces';
-import { GiphyInterface } from '../interfaces/GiphyInterfaces';
+import { GiphyRecordInterace } from '../interfaces/GiphyInterfaces';
 
 function pixBayMapData({ hits }: PixBayInterface) {
   return hits.map((hit) => hit.webformatURL);
 }
 
-function giphyMapData(giphyData: GiphyInterface[]) {
+function giphyMapData(giphyData: GiphyRecordInterace[]) {
   return giphyData.map((giphy) => giphy.images.original.url);
 }
 

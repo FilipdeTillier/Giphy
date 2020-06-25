@@ -1,10 +1,15 @@
-type GiphyObcjetInterface = {
-  [key: string]: GiphyObcjetInterface;
-};
-
-interface GiphyInterface {
-  [key: string]: string | number | GiphyObcjetInterface;
-  images: GiphyObcjetInterface;
+interface GiphyImageInterface {
+  height: string;
+  size: string;
+  url: string;
+  width: string;
 }
 
-export { GiphyInterface };
+interface GiphyRecordInterace {
+  id: string;
+  images: {
+    [key: string]: GiphyImageInterface;
+  };
+}
+
+export { GiphyRecordInterace };

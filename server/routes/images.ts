@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import searchGiphy from '../services/giphyService';
 import * as core from 'express-serve-static-core';
-import serachPixBay from '../services/pixBayService';
 import { INTERNAL_SERVER_ERROR, BAD_REQUEST } from 'http-status-codes';
+
+import searchGiphy from '../services/giphyService';
+import serachPixBay from '../services/pixBayService';
 
 const imagesRouter: core.Router = Router();
 
@@ -27,6 +28,7 @@ imagesRouter.get('/images', async function (req, res, next) {
     const pixBayData = await serachPixBay(q, halfLimit, offset);
     res.json([...giphyData, ...pixBayData]);
   } catch (err) {
+    console.log(err);
     return res.send('Error').status(INTERNAL_SERVER_ERROR);
   }
 });
