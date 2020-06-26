@@ -1,0 +1,14 @@
+Description:
+    Here is a small application that allows us to download, using the phrase we enter, 
+    download photos from 2 sources, i.e. Pixbay and Giphy. 
+    I used node js and express technology to create the facade for these two sources 
+    (which was not needed, you can easily download it through the browser), additionally I used typescript. 
+    On Front-end I tried to use as few libraries as possible, so there is no bootstrap on it, no form library, or Redux.
+
+ToDo:
+    - The application is adapted to mobile devices, but is not stylized. It could be useful, modeling on some page, stylize this view to make it prettier.
+    - The current solution is scroll laod. If there are no more results, an empty array is returned, i.e. as in external APIs (giphy, pixbay). However, it's worth calculating the number of subpages if you want to use the usual pagination with pages instead of scroll laod.
+    - If the application is growing, add a library for forms. My suggestion is react hooks forms with the Yup library.
+    - A backlog logger would be useful to track what's going on. My suggestion is the winston library.
+    - No redux was needed at the moment. But if the application were also to grow, it is worth using.
+    - A spinner would be useful in the next stage of application development. In addition, the arrow at the bottom of the page, thats will be useful if we want to scroll to top.
