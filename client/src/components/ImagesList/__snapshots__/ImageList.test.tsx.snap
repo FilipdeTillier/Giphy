@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render component proprely 1`] = `
+exports[`Image list tests render component proprely 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -12,112 +12,92 @@ Object {
           class="card"
         >
           <img
+            alt="0"
             class="card__image"
-            height="100%"
             src="0"
-            width="100%"
           />
         </div>
         <div
           class="card"
         >
           <img
+            alt="1"
             class="card__image"
-            height="100%"
             src="1"
-            width="100%"
           />
         </div>
         <div
           class="card"
         >
           <img
+            alt="2"
             class="card__image"
-            height="100%"
             src="2"
-            width="100%"
           />
         </div>
         <div
           class="card"
         >
           <img
+            alt="3"
             class="card__image"
-            height="100%"
             src="3"
-            width="100%"
           />
         </div>
         <div
           class="card"
         >
           <img
+            alt="4"
             class="card__image"
-            height="100%"
             src="4"
-            width="100%"
           />
         </div>
         <div
           class="card"
         >
           <img
+            alt="5"
             class="card__image"
-            height="100%"
             src="5"
-            width="100%"
           />
         </div>
         <div
           class="card"
         >
           <img
+            alt="6"
             class="card__image"
-            height="100%"
             src="6"
-            width="100%"
           />
         </div>
         <div
           class="card"
         >
           <img
+            alt="7"
             class="card__image"
-            height="100%"
             src="7"
-            width="100%"
           />
         </div>
         <div
           class="card"
         >
           <img
+            alt="8"
             class="card__image"
-            height="100%"
             src="8"
-            width="100%"
           />
         </div>
         <div
           class="card"
         >
           <img
+            alt="9"
             class="card__image"
-            height="100%"
             src="9"
-            width="100%"
           />
         </div>
-      </div>
-      <div
-        class="images-button"
-      >
-        <button
-          data-testid="loadMore"
-          type="button"
-        >
-          Load more
-        </button>
       </div>
     </div>
   </body>,
@@ -129,112 +109,92 @@ Object {
         class="card"
       >
         <img
+          alt="0"
           class="card__image"
-          height="100%"
           src="0"
-          width="100%"
         />
       </div>
       <div
         class="card"
       >
         <img
+          alt="1"
           class="card__image"
-          height="100%"
           src="1"
-          width="100%"
         />
       </div>
       <div
         class="card"
       >
         <img
+          alt="2"
           class="card__image"
-          height="100%"
           src="2"
-          width="100%"
         />
       </div>
       <div
         class="card"
       >
         <img
+          alt="3"
           class="card__image"
-          height="100%"
           src="3"
-          width="100%"
         />
       </div>
       <div
         class="card"
       >
         <img
+          alt="4"
           class="card__image"
-          height="100%"
           src="4"
-          width="100%"
         />
       </div>
       <div
         class="card"
       >
         <img
+          alt="5"
           class="card__image"
-          height="100%"
           src="5"
-          width="100%"
         />
       </div>
       <div
         class="card"
       >
         <img
+          alt="6"
           class="card__image"
-          height="100%"
           src="6"
-          width="100%"
         />
       </div>
       <div
         class="card"
       >
         <img
+          alt="7"
           class="card__image"
-          height="100%"
           src="7"
-          width="100%"
         />
       </div>
       <div
         class="card"
       >
         <img
+          alt="8"
           class="card__image"
-          height="100%"
           src="8"
-          width="100%"
         />
       </div>
       <div
         class="card"
       >
         <img
+          alt="9"
           class="card__image"
-          height="100%"
           src="9"
-          width="100%"
         />
       </div>
-    </div>
-    <div
-      class="images-button"
-    >
-      <button
-        data-testid="loadMore"
-        type="button"
-      >
-        Load more
-      </button>
     </div>
   </div>,
   "debug": [Function],

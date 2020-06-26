@@ -10,13 +10,7 @@ const ImagesList: React.FC<ImagesListProps> = ({ images }) => {
       <div className="images-list">
         {images.map((image) => (
           <div key={image} className="card">
-            <img
-              className="card__image"
-              src={image}
-              alt={image}
-              width="100%"
-              height="100%"
-            ></img>
+            <img className="card__image" src={image} alt={image}></img>
           </div>
         ))}
       </div>

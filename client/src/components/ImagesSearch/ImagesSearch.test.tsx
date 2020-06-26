@@ -15,26 +15,28 @@ const setup = () => {
   };
 };
 
-test('render component proprely', () => {
-  const { container } = setup();
-  expect(container).toMatchSnapshot();
-});
+describe('Image serach tests', () => {
+  it('render component proprely', () => {
+    const { container } = setup();
+    expect(container).toMatchSnapshot();
+  });
 
-test('renders images search component', () => {
-  const { searchInput, serachButton } = setup();
-  expect(searchInput).toBeInTheDocument();
-  expect(serachButton).toBeInTheDocument();
-});
+  it('renders images search component', () => {
+    const { searchInput, serachButton } = setup();
+    expect(searchInput).toBeInTheDocument();
+    expect(serachButton).toBeInTheDocument();
+  });
 
-test('on click submit with empty input shouldnt call method', async () => {
-  const { serachButton } = setup();
-  fireEvent.click(serachButton);
-  expect(onSubmit).toHaveBeenCalledTimes(0);
-});
+  it('on click submit with empty input shouldnt call method', async () => {
+    const { serachButton } = setup();
+    fireEvent.click(serachButton);
+    expect(onSubmit).toHaveBeenCalledTimes(0);
+  });
 
-test('on click submit should call method once', () => {
-  const { searchInput, serachButton } = setup();
-  fireEvent.change(searchInput, { target: { value: 'Test' } });
-  fireEvent.click(serachButton);
-  expect(onSubmit).toHaveBeenCalledTimes(1);
+  it('on click submit should call method once', () => {
+    const { searchInput, serachButton } = setup();
+    fireEvent.change(searchInput, { target: { value: 'Test' } });
+    fireEvent.click(serachButton);
+    expect(onSubmit).toHaveBeenCalledTimes(1);
+  });
 });

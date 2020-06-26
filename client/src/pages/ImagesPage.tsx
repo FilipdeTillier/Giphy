@@ -28,7 +28,6 @@ const ImagesPage: React.FC = () => {
         limit
       );
       setPending(false);
-
       return giphy;
     } catch (err) {
       console.log(err);
@@ -89,7 +88,7 @@ const ImagesPage: React.FC = () => {
       <h3>Search your giphy</h3>
       <ImagesSearch onSubmit={onSearchGiphy} />
       <ImagesList images={giphys} />
-      {noResults && <p>No results</p>}
+      {noResults && <p data-testid="noResults">No results</p>}
     </div>
   );
 };

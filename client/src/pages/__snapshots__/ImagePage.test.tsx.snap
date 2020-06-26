@@ -1,10 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image serach tests render component proprely 1`] = `
+exports[`Image page tests render component proprely 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <div>
+        <h3>
+          Search your giphy
+        </h3>
+        <form
+          class="giphy-form"
+        >
+          <div
+            class="form-group"
+          >
+            <input
+              class="form-group__input"
+              data-testid="searchInput"
+              name="search"
+              placeholder="Search..."
+              type="text"
+              value=""
+            />
+            <button
+              class="form-group__button"
+              data-testid="serachButton"
+              type="submit"
+            >
+              Search
+            </button>
+            
+          </div>
+        </form>
+        <div
+          class="images-list"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <h3>
+        Search your giphy
+      </h3>
       <form
         class="giphy-form"
       >
@@ -29,33 +68,10 @@ Object {
           
         </div>
       </form>
-    </div>
-  </body>,
-  "container": <div>
-    <form
-      class="giphy-form"
-    >
       <div
-        class="form-group"
-      >
-        <input
-          class="form-group__input"
-          data-testid="searchInput"
-          name="search"
-          placeholder="Search..."
-          type="text"
-          value=""
-        />
-        <button
-          class="form-group__button"
-          data-testid="serachButton"
-          type="submit"
-        >
-          Search
-        </button>
-        
-      </div>
-    </form>
+        class="images-list"
+      />
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
